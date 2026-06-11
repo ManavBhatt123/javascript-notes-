@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 12;
+        let b =13;
+        const c = 23;
+
+        const person = {name:"manav"}
+        person.name="bhatt";
+        console.log(person);//bhatt (yaha humne uske value ke part ko change kara hai )
+
+        //block scope 
+        {
+            var x = 12;
+        }
+        console.log(x);
+        {
+            let y = 12;
+        }
+        console.log(y);
+
+        //functins scope 
+        function abcd(){
+            if(true){
+                var e = 12;
+                let f = 14;
+            }
+            console.log(e);
+            console.log(f);
+        }
+
+
+
+        //reassignment 
+        var a = 12;
+        a = 42;
+
+        let p = 23;
+        p = 23;
+
+        //hoisitng 
+
+        console.log(d);
+        var d = 2;
+
+    </script>
+</body>
+</html>
+        
+    

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //make the bmi calculator 
+        function bmi(weight,height){
+            return weight/(height*height);
+        }
+        console.log(bmi(60,1.68).toFixed(2));
+
+        //create the reusable discount calculator 
+        function discountcalc(val){
+            return function(){
+                let discountval = val - val*(10/100)
+                console.log(discountval)
+            }
+        }
+        let finalamount=discountcalc(100);
+        finalamount();
+
+        //build a counter using closures 
+        function counter(){
+            let counter = 0;
+            return function(){
+                counter++;
+                console.log(counter);
+            }
+        }
+        let c = counter();
+        c();
+        c();
+        c();
+        let d = counter();
+        d();
+        c();
+
+        //create the pure function to tranform a value 
+        function transform(a){
+           return a + 2;
+        }
+        console.log(transform(4));
+
+        //use iife to isolate a variable 
+        (function isolate(){
+            let a = 2;
+        })()
+        console.log(a);
+
+
+    </script>
+</body>
+</html>

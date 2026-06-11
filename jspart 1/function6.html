@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // //function declaration
+      // function lolo(){
+      //   console.log("happy new year");
+      // }
+      // lolo();
+
+      // //function declaration with parameter 
+      // function add(a,b){
+      //   return a+b;
+      // }
+      // console.log(add(2,3))
+
+      // //function expression
+      // let fnc=function(){
+      //   console.log("hello");
+      // }
+      // fnc();
+
+      // //arrow function 
+      // let a = ()=>{
+      //   console.log("history");
+      // }
+      // a()
+
+      // let sum = (a,b)=>{
+      //   return a+b;
+      // }
+      // console.log(sum(3,4))
+
+      // function dance(v1){
+      //   console.log(`${v1} naach raha hai`)
+      // }
+      // dance("horse");
+      // dance("dog");
+      // dance("cat");
+
+      //default paramter 
+      function add(v1=1,v2=1){
+        console.log(v1+v2);
+      }
+      add();
+
+      //rest parameter
+      function num(...val){
+        console.log(val);
+      }
+      num(1,2,4,5,6,6,7,8);
+
+
+      //return value 
+      function abcd(){
+        return 12;
+      }
+      let val = abcd();
+      console.log(val);
+
+      //first class function 
+      function ab(val){
+        val();
+      }
+      ab(function(){
+        console.log("hi")
+      })
+
+      //higher order function
+       //1) function ko arguments ke roop mai leta ho 
+      function ab(val){
+        val();
+      }
+      ab(function(){
+        console.log("hi")
+      })
+       //2) function ko return karta ho 
+       function xy(){
+        return function(){
+          console.log("manav")
+        }
+       }
+       xy()();
+
+       //closures 
+       function anc(){
+        let a = 12;
+        return function(){
+          console.log(a);
+        }
+      }
+      anc()();
+      //lexical scoping 
+      
+      let a = 10;//yaha a define hogya toh iske niche voh kahi bhi call hota sakta hai a = 10 hogi 
+      function outer(){
+        let b = 20;//b yaha define hua hai toh uske niche kahi bhi use ho sakta hai  
+        function inner(){
+          console.log(a,b);
+        }
+        inner();
+      }
+      outer();
+
+      //iife
+     (function(){
+      console.log("heyhey")
+      })()
+
+      //hoisting in function declaration 
+      ax();
+      function ax(){
+        console.log("bye");//bye
+      }
+      //hoisting in function expression
+      // ay();
+      // let ay=function(){
+      //   console.log("bye1")//reference Error
+      // }
+
+
+
+    </script>
+  </body>
+</html>
