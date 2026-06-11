@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downloading Progress</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 50px;
+    border-radius: 15px;
+    text-align: center;
+    width: 280px;
+  }
+
+  h2 {
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  .progress-bar {
+    background: rgba(255, 255, 255, 0.15);
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .progress {
+    height: 100%;
+    width: 0%; /* stays at start */
+    background: white;
+  }
+
+  .percentage {
+    font-size: 14px;
+    opacity: 0.85;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Downloading...</h2>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <div class="percentage">0%</div>
+  </div>
+  <script>
+    let count = 0;
+    let progress = document.querySelector(".progress");
+    let percentagetext = document.querySelector(".percentage")
+    setInterval(function(){
+        if(count<=99){  
+            count++;
+            progress.style.width = `${count}%`;
+            percentagetext.textContent = `${count}%`
+        }
+        else{
+            document.querySelector("h2").textContent="Downloaded"
+            clearInterval();
+        }
+    },70)
+  </script>
+</body>
+</html>
