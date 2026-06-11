@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hulu{
+            background-color: brown;
+            color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>kaise ho </h1>
+    <script>
+        //js se css badalna 
+        let h1 = document.querySelector("h1")
+
+        //below code is one way to add css
+        // h1.style.color="red";
+        // h1.style.backgroundColor="black"
+        // h1.style.fontFamily="sans-serif"
+
+        //this another way where we have write css property in css
+        let head = document.querySelector("h1");
+        h1.classList.add("hulu")//add karta hai propeties to attribute
+        h1.classList.remove("hulu")//remove karta hai property jo lagi hoti hai attribute mai 
+        h1.classList.toggle("hulu")//toggle means agar property hai toh hata dega aur nhi lagi toh laga dega 
+    </script>
+</body>
+</html>

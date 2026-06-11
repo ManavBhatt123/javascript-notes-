@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hulu{
+            color: red;
+            background-color: rgb(110, 62, 62);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>hey kaise ho 2</h1>
+        <h1>hey kaise ho 3</h1>
+        <h1>hey kaise ho 4</h1>
+    </div>
+    <script>
+        //dynamic dom manipulation 
+        let h1=document.createElement("h1")
+        h1.textContent="hello ji kaise ho";
+        document.body.prepend(h1);
+
+        let h1=document.querySelector("h1");
+        h1.remove();
+
+        
+    </script>
+</body>
+</html>

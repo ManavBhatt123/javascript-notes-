@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button class="buy-now">buy now</button>
+    <button>add to cart</button>
+    <button class="buy-now">buy now</button>
+    <h1 id = "hello">hello</h1>
+    <ul>
+        <li>hi</li>
+        <li>hi1</li>
+        <li>hi2</li>
+    </ul>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus maiores, inventore aspernatur quaerat odio cum recusandae fuga voluptate aliquam id itaque ipsa corrupti aperiam, tenetur tempora repellat maxime porro! Iste.
+    </div>
+    <button disabled class="btn">hello</button> -->
+    <ul>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    </ul>
+    <script>
+        //(Q1) use querySelectorAll to select a ll buttons with class".buy-now" 
+        // let buynow = document.querySelectorAll(".buy-now");
+        // console.log(buynow)
+
+        // //Q2) select the heading of a page by Id but chnages its text to "welcome to world"
+        // let hello = document.getElementById("hello")
+        // hello.textContent="welcome to world";
+
+        // //Q3) select all <li> elements and print their text using a loop.
+        // let lis = document.querySelectorAll("li")
+        // lis.forEach(function(val){
+        //     console.log(val.innerText)
+        // })
+        // //Q4) add a title attribute to a div dynamically 
+        // let div = document.querySelector("div");
+        // div.setAttribute("title","some info")
+
+        // //Q5) remove the disabled attribute from a button 
+        // let btn = document.querySelector(".btn");
+        // btn.removeAttribute("disabled");
+        
+        // //Q6) can you remove an element using removeChild()?
+        // document.querySelector("div").removeChild(elementNode)
+
+        //Q7) create a new list item <li>New task</li> and add it to the end of a <ul>
+        let ul = document.querySelector("ul");
+        let li = document.createElement("li");
+
+        li.textContent="New Task";
+        ul.appendChild(li)
+
+        
+    </script>
+</body>
+</html>

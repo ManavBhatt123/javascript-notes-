@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            height: 100%;
+            background-color: rgb(54, 52, 52);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #input{
+            display: none;
+        }
+        #input-box{
+            padding: 12px 22px;
+            background-color: rgb(27, 109, 74);
+            color: white;
+            border-radius: 5px;
+            user-select: none;
+        }
+        #input-box:hover{
+            background-color: rgb(15, 69, 46);;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+         <input type="file" name="" id="input">
+         <div id="input-box">
+            Upload file
+         </div>
+    </div>
+    <script>
+        let inputbox=document.querySelector("#input-box");
+        let choose = document.querySelector("#input")
+        inputbox.addEventListener("click",function(){
+            choose.click();
+        })
+        choose.addEventListener("change",function(dets){
+            const file = dets.target.files[0];
+            if(file){
+                inputbox.textContent=file.name;
+            }
+        })
+        //2:46:35
+    </script>
+</body>
+</html>

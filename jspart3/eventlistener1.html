@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> apple</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea eos assumenda, optio dolore exercitationem et eius soluta quidem quos recusandae, odit in voluptas, consequuntur nihil! Magnam iure quaerat voluptate.</p>
+    <input type="text" placeholder="name">
+
+    <h3 id="details">Select your device </h3>
+        <select>
+            <option slected disabled>Choose Your Device</option>
+            <option value="samsung">Samsung</option>
+            <option value="mi">Xiomi</option>
+            <option value="apple">Apple iphone</option>
+            <option value="oppo">Oppo</option>
+        </select>
+    <script>
+        //click and dblclick
+        let h1=document.querySelector("h1");
+        let p =document.querySelector("p");
+        h1.addEventListener("click",function(){
+            h1.style.color="red";
+        })
+        p.addEventListener("click",function(){
+            p.style.color="blue";
+        })
+        p.addEventListener("dblclick",function(){
+            p.style.color="red";
+        })
+        p.removeEventListener("click",function(){
+            p.style.color="blue";
+        })
+
+
+        //input 
+        let input=document.querySelector("input");
+        input.addEventListener("input",function(dets){
+            if(dets.data!==null){
+                console.log(dets.data)
+            }
+        })
+
+
+        //change
+        let sel=document.querySelector("select");
+        let details = document.querySelector("#details");
+
+        sel.addEventListener("change", function(dets){
+            details.textContent=`${dets.target.value} Device Selected`;
+        })
+
+        
+    </script>
+</body>
+</html>

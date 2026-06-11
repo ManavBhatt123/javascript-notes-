@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .placeholder{
+            width: 200px;
+        }
+        .highlight{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">hello what us </h1>
+    <ul>
+        <li>apple</li>
+        <li>banana</li>
+        <li>grapes</li>
+        <li>mango</li>
+    </ul>
+    <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta voluptates sit alias culpa reiciendis cupiditate velit incidunt illum voluptas totam dolore tenetur, a odio corrupti, nam, possimus fugit. Provident?
+    </div>
+    <script>
+        //task1 : select the heading of a page by id and change its text to "welcome to sheriyans"
+        let h1=document.querySelector("#head");
+        h1.textContent="welcome to sheriyans";
+
+        //task2 : select all<li> elements and print their text using a loop . 
+            let lis=document.querySelectorAll("li");
+            for(let i = 0;i<lis.length;i++){
+                console.log(lis[i].textContent)
+            }
+
+        //add a title attribute to a div autmatically 
+        let div=document.querySelector("div")
+        div.setAttribute("title","some info")
+
+        //create a new list <li>new task</li> and add it to the end of a <ul>
+        // let ul=document.querySelector("ul");
+        // let li=document.createElement("li");
+        // li.textContent="new task";
+        // ul.appendChild(li);
+
+        //select the first item in a list and delete ut from the DOM.
+        // let ul = document.querySelector("ul");
+        // let li = document.querySelector("li");
+        // ul.removeChild(li);
+
+        //add a highlight class to  every even item in a list 
+        let li = document.querySelectorAll("ul li:nth-child(2n)")
+        li.forEach(function(e){
+            e.classList.add("highlight");
+            e.style.fontSize="20px";
+        })
+
+        
+
+
+    </script>
+</body>
+</html>
