@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+        function debounce(fnc,delay){
+            let timer;
+            return function(...args){
+                clearTimeout(timer);
+                timer=setTimeout(function(){
+                    fnc(...args);
+                },delay);
+            }
+        }
+
+        function throttle(fnc,delay){
+            let timer = 0;
+            return function(...args){
+                let now = Date.now();
+                if(now-timer>=delay){
+                    timer=now;
+                    fnc(...args)
+                }
+            }
+        }
+        document.querySelector("input").addEventListener("input",debounce(function(){
+            console.log("hey")
+        },1000)
+    );
+    </script>
+</body>
+</html>

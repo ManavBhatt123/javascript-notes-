@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //iife -> immediately invoke function expression , it means immediately function expression ko call karna 
+        let bank = (function(){
+            let bankbalance = 10000;
+            function checkbalance(){
+                console.log(bankbalance);
+            }
+            function setbalance(val){
+                bankbalance=val;
+            }
+            function withdraw(val){
+                if(val<=bankbalance){
+                    bankbalance-=val;
+                    console.log(bankbalance);
+                }
+            }
+            return{
+                checkbalance,//
+                setbalance,
+                withdraw,
+            };
+        })();
+        bank.withdraw(4000);
+
+
+
+        //revealing module pattern 
+        let bank1 = (function(){
+            let bankbalance = 10000;
+            function checkbalance(){
+                console.log(bankbalance);
+            }
+            function setbalance(val){
+                bankbalance=val;
+            }
+            function withdraw(val){
+                if(val<=bankbalance){
+                    bankbalance-=val;
+                    console.log(bankbalance);
+                }
+            }
+            return{
+                check:checkbalance,//give other name 
+                set:setbalance,
+                draw:withdraw,
+            };
+        })();
+        bank1.draw(4000);
+           
+    </script>
+</body>
+</html>

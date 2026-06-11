@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //factory function pattern 
+        // function createproduct(name,price){
+        //     let stock = 10;
+        //     return{
+        //         name,
+        //         price,
+        //         checkstock(){
+        //             console.log(stock);
+        //         },
+        //         buy(qty){
+        //             if(qty<=stock){
+        //                 stock-=qty;
+        //                 console.log(`${qty} pieces booked - ${stock} pieces left.`);
+        //             }
+        //             else{
+        //                 console.error(`we only have ${stock} pieces left.`);
+        //             }
+        //         },
+        //         refill(qty){
+        //             stock+=qty;
+        //             console.log(`refilled the stock - ${stock} pieces left`);
+        //         }
+        //     }
+        // }
+        // let iphone = createproduct("iphone",70000);
+        // let redmi = createproduct("redmi",30000);
+        
+
+
+
+        //observer pattern 
+        class YoutubeChannel{
+            constructor(){
+                this.subscribers=[];
+            }
+            subscribe(user){
+                this.subscribers.push(user);
+                user.update(`you have subscribe the channel`);
+            }
+            unsubscribe(user){
+                this.subscribers=this.subscribers.filter((sub)=>sub!==user);
+                user.update(`you have unsubscribe the channel`)
+            }
+            notify(msg){
+                this.subscribers.forEach((sub)=>sub.update(msg));
+            }
+        }
+        class User{
+            constructor(name){
+                this.name=name;
+            }
+            update(data){
+                console.log(`${this.name},${data}`);
+            }
+        }
+        let newideas = new YoutubeChannel();
+        let user1 = new User("Manav");
+        let user2 = new User("ram");
+        let user3 = new User("max");
+
+        newideas.subscribe(user1);
+        newideas.unsubscribe(user2);
+        newideas.notify("we have hit 100k , thankyou for your support")
+
+        </script>
+</body>
+</html>
