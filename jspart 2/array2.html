@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //add mango at the end and pineapple at the beginning of this array 
+       let fruit = ["apple","banana"]
+       fruit.push("mango");
+       fruit.unshift("pineapple");
+       console.log(fruit);
+
+       //replace "banana" with "kiwi" in the array above 
+       let fruit1 = ["apple","banana"]
+       fruit1[1]="kiwi";
+       console.log(fruit1);
+
+       //remove the last item from this array using a method 
+       let numbers = [1,2,3,4]
+       numbers.pop();
+       console.log(numbers);
+
+       //insert "Red" and "Blue" at index 1 int the array 
+       let colors = ["Green","Yellow"]
+       colors.splice(1,0,"Red","Blue");
+       console.log(colors);
+
+       //extract only the middle 3 elements from this array 
+       let items = [1,2,3,4,5,6];
+       let items1 = items.slice(1,5);
+       console.log(items1);
+
+       //sort this array alphabetically and then reverse it 
+       let names = ["Zara","Arjun","Manav","Ayush"];
+       console.log(names.sort().reverse());
+
+       //use .map() to square each number 
+       let arr1=[1,2,3,4]
+       let newarr1=arr1.map(function(val){
+        return val*val;
+       })
+       console.log(newarr1);
+
+       //use .filter() to keep numbers greater than 10 
+       let arr2=[14,9,25,8,34]
+       let newarr2=arr2.filter(function(val){
+        return val>10;
+       })
+       console.log(newarr2);
+
+       //use .reduce() to find the sum of this array
+       let arr3=[1,2,3,4,5]
+       let ans=arr3.reduce(function(accumulator,val){
+        return accumulator+val;
+       },0)
+       console.log(ans);
+
+       //use .find() to get the first number less than 10 
+       let arr4=[12,12,3,45,9,6]
+       let newarr3=arr4.find(function(val){
+         return val<10;
+       })
+       console.log(newarr3);
+
+       //use .some() to check if any statement has scored below 35;
+       let arr5=[52,23,45,56,78];
+       let newarr4=arr5.some(function(val){
+        return val<35;
+       })
+       console.log(newarr4);
+
+       //use .every() to check if all numbers all even :
+       let arr6=[2,4,6,7,8];
+       let newarr5=arr6.every(function(val){
+         return val%2===0;
+       })
+       console.log(newarr5);
+
+       //destructure this array to get firstName and lastname 
+       let fullName = ["Manav","Bhatt"]
+       let [firstName,lastname]=fullName;
+
+       //merge two arrays using spread operator 
+       let a = [1,2];
+       let b = [3,4];
+       let c = [...a,...b];
+
+       //Add "India" to the start of this array using spread 
+       let countries = ["USA","UK"]
+       let newcountry = ["India",...countries];
+
+       //clone this array properly (not by reference)
+       let arr=[1,2,3]
+       let array=[...arr];
+    </script>
+</body>
+</html>

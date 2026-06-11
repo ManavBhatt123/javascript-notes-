@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //create the object for a student with name,age and isenrolled 
+        let stuobj={
+            name:"manav",
+            age:20,
+            isenrolled:true,
+        };
+
+        //can an object key be a number or boolean? try this 
+        const obj={
+            true:"yes",
+            43:"answer",
+        };
+        console.log(obj[43]);//yes object key be number 
+        console.log(obj[true])// and boolean also
+
+        //access the value of "first-name" from this object:
+        const user={
+            "first-name":"manav",
+        };
+        console.log(user["first-name"]);
+
+        //given a dynamic key let key ="age",how will you access user[key]?
+        let key="age";
+        const user1 = {
+            age:20,
+        }
+        console.log(user1[key]);
+
+        //use a variable to dynamically assign a property
+        const key1 = "role";
+        let obj1={
+            name:"manav",
+            [key1]:"admin",
+        };
+        console.log(obj1.role);
+
+        //destructure the key "first-name" as a variable  called firstName
+        const User ={
+            "first-name":"Manav",
+        };
+        let {"first-name":firstName}=User;
+        
+    </script>
+</body>
+</html>

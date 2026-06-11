@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //create array 
+        // let marks= [10,2,34,5];
+        // console.log(marks[2]);//access the array 
+        // marks[2]=40;//modify the array 
+        // console.log(marks);
+
+        //array methods 
+        // let arr=[1,2,3,4,5,6,7];
+        // arr.push(5);
+        // console.log(arr);
+        // arr.pop();
+        // console.log(arr);
+        // arr.shift();
+        // console.log(arr);
+        // arr.unshift(8);
+        // console.log(arr);
+        // arr.splice(2,1);
+        // console.log(arr);
+        // let newarr=arr.slice(1,4);
+        // console.log(newarr);
+        // arr.reverse();
+        // console.log(arr);
+
+        // let arr1=[2,6,4,7]
+        // arr1.sort(function(a,b){
+        //     return a - b;
+        // })
+        // console.log(arr1);
+
+
+        //foreach 
+        let arr2=[23,45,6,7,8];
+        arr2.forEach(function(val){
+            console.log(val + 5);
+        })
+
+        //map 
+        let arr3 = [1,2,3,4];
+        let newar=arr3.map(function(val){
+            return 12;
+        })
+        console.log(newar)
+
+        //filter 
+        let arr4 = [1,2,3,4,5,6];
+        let newar1=arr4.filter(function(val){
+            if(val>3) return true;
+        })
+        console.log(newar1);
+
+        //reduce 
+        let arr5 = [1,2,3,4];
+        let ans = arr5.reduce(function(accumulator,val){
+            return accumulator + val;
+        },0);
+
+        //find
+        let arr6=[3,5,6,7] 
+        let ans2=arr6.find(function(val){
+            return val === 3;
+        })
+        console.log(ans2);
+
+        //some()
+        let arr7=[20,34,45,67]
+        let ans3=arr7.some(function(val){
+            return val>60;
+        })
+
+        //filter()
+        let arr8=[23,45,35,78]
+        let ans4=arr8.every(function(val){
+            return val>20;
+        })
+
+        //destructing 
+        let arr9=[1,2,3,4];
+        let[a,b,,c]=arr9;
+
+        //spread operator
+        let arr10=[1,2,3,4,5,6,7,8]
+        let array1=[...arr10];
+
+    </script>
+</body>
+</html>

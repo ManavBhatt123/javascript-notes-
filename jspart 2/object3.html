@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj={
+        name:"Manav",
+        age:20,
+      }
+      console.log(obj.name);//using dot 
+      console.log(obj['name']);//using bracket 
+
+      //nesting 
+      const user = {
+        name:"Manav",
+        address:{
+          city:"Delhi",
+          pin:110092,
+          location:{
+            lat:21.3,
+            lng:17.5,
+          },
+        },
+      };
+
+      console.log(user.address.location.lat);//deepaccess
+
+      //object destructing 
+      let{lat,lng}=user.address.location;
+
+      //looping 
+      //1) for-in
+      let obj1 ={
+        name:"manav",
+        age:20,
+        email:"test@gmail.com"
+      };
+
+      //Object.keys
+      for(let key in obj1){
+        console.log(key,obj1[key]);
+      }
+
+      console.log(Object.keys(obj1));
+      console.log(Object.entries(obj1));
+
+      //copying object 
+      //1) spread
+      let ob1={
+        name:"Raj",
+        age:24,
+        email:"raj@email.com",
+      }
+      let ob2={...ob1};
+      console.log(ob2);
+      //2) Object.assign
+      let ob3=Object.assign({price:Infinity},ob1)
+      console.log(ob3)
+
+      //3) deep cloning(imp)
+      let ob4={
+        name:"max",
+        age:22,
+        email:"max@gmail.com",
+        address:{
+          city:"delhi"
+        },
+      };
+      
+      let newob=JSON.parse(JSON.stringify(ob4));
+
+      //optional chaining 
+      let user1 ={
+        name:"maxin",
+      };
+      console.log(user1.price);
+      console.log(user1.name?.age);
+
+      
+      
+
+    </script>
+  </body>
+</html>
