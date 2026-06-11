@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function kuchderbaad(fnc){
+            setTimeout(fnc, Math.floor(Math.random()*10)*1000);
+        }
+        kuchderbaad(function(){
+            console.log("hello");
+        })
+
+        function profilelekaraao(username,cb){
+            setTimeout(()=>{
+                cb({username})
+            },2000)
+        }
+        profilelekaraao("manav",function(data){
+            console.log(data);
+        })
+    </script>
+</body>
+</html>
