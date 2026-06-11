@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.form-container {
+  background-color: #1a1a1a;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 500;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.role {
+  color: #a1a1a1;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 13px;
+  color: #ccc;
+}
+</style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add User UI</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2>Add User</h2>
+      <form>
+        <label>Name</label>
+        <input type="text" placeholder="Enter name">
+
+        <label>Role</label>
+        <input type="text" placeholder="Enter role">
+
+        <label>Bio</label>
+        <textarea placeholder="Enter bio"></textarea>
+
+        <label>Photo URL</label>
+        <input type="url" placeholder="Enter photo URL">
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="cards-container">
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User photo">
+        <h3>John Doe</h3>
+        <p class="role">Frontend Developer</p>
+        <p class="bio">Loves building beautiful UIs and web experiences.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User photo">
+        <h3>Jane Smith</h3>
+        <p class="role">Backend Engineer</p>
+        <p class="bio">Enjoys solving complex problems and building scalable systems.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User photo">
+        <h3>Alex Lee</h3>
+        <p class="role">UI/UX Designer</p>
+        <p class="bio">Passionate about user experience and minimalist design.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+    <script>
+        let form = document.querySelector("form");
+        const usermanager ={
+            users:[],
+            init:function(){
+                form.addEventListener("submit", this.submitForm.bind(this))
+            },
+            submitForm:function(e){
+                e.preventDefault();
+                console.log("form submitted");
+            },
+            adduser : function(){},
+            removeuser : function(){},
+        };
+        usermanager.init();
+
+        
+    </script>
+</body>
+</html>

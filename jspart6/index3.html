@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hey</h1>
+    <script>
+      //(global scope)
+      // console.log(this)
+
+      //(function scope)
+      // function abcd(){
+      //     console.log(this);
+      // }
+      // abcd();
+
+      //(method scope)
+      // let obj ={
+      //     name :"manav",
+      //     sayName:function(){
+      //         console.log(this);
+      //     }
+      // }
+      // obj.sayName();
+
+      //event handler
+      document.querySelector("h1").addEventListener("click", function () {
+        console.log(this);
+      });
+
+      //call apply bind
+      //function ko call karte waqt aap set kr skte ho ki uski this ki value kya hogi
+
+      let obj = {
+        name: "manav",
+      };
+      function abcd() {
+        console.log(this);
+      }
+      abcd.call(obj);
+
+
+      
+      function greet(city) {
+        console.log(this.name + " from " + city);
+      }
+
+      const user = { name: "Manav" };
+
+      greet.call(user, "Delhi");
+    </script>
+  </body>
+</html>

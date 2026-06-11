@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Createbiscuit(name,price,qty,company,category){
+            this.name = name;
+            this.price = price;
+            this.qty = qty;
+            this.company = company;
+            this.category = category;
+        }
+
+        let biscuit1=new Createbiscuit("Oreo",10,2,"Cadbury","Chocolate");
+
+        function Createpencil(name,color,price,company){
+            this.name=name;
+            this.color=color;
+            this.price=price;
+            this.write = function(text){
+                let h1=document.createElement("h1");
+                h1.textContent=text;
+                h1.style.color=color;
+                document.body.append(h1);
+            }
+        }
+        Createpencil.prototype.company="Doms"
+        
+        let pencil1= new Createpencil("natraj","red",15);
+        let pencil2 = new Createpencil("doms","black",15);
+    </script>
+</body>
+</html>

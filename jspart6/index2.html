@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>     
+    <script>
+        function createtoaster(config){
+            return function(notification){
+                let div = document.createElement("div");
+                div.className=`fixed parent p-4 flex flex-col gap-4 rounded ${config.positIonX==="right"?"right-10":"left-10"} ${config.positionY==="top"?"top-10":"bottom-10"} ${config.theme==="dark"?"bg-gray-100 text-black":"bg-gray-800 text-white"}`
+                div.textContent=notification;
+                document.body.appendChild(div);
+
+                setTimeout(()=>{
+                    document.body.removeChild(div);
+                },config.duration*1000)
+            }
+        }
+        let toaster=createtoaster({
+            positionX:"left",
+            positionY:"top",
+            theme:"light",
+            duration:3,
+        });
+        toaster("this is dummy toaster");
+    </script>
+</body>
+</html>

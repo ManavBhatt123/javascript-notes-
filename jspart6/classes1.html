@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Createpencil{
+            constructor(name,color,price,company){
+                this.name=name;
+                this.color=color;
+                this.price=price;
+                this.company=company;
+            }
+            erase(){
+                document.querySelectorAll("h1").forEach((e)=>{
+                    if(e.style.color === this.color){
+                        e.remove();
+                    }
+                })
+            }
+            write(text){
+                let h1 = document.createElement("h1");
+                h1.style.color=this.color;
+                h1.textContent=text;
+                document.body.appendChild(h1)
+            }
+        }
+        let p1 = new Createpencil("nataraj","red",20,"nataraj");
+        let p2 = new Createpencil("apsara","black",20,"apsara")
+
+    </script>
+</body>
+</html>
